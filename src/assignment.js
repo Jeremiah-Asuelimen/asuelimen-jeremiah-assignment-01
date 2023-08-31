@@ -14,10 +14,18 @@ const assignment = {};
  * @param {Number} destination is the stopping number
  * @returns number the sum of the numbers from 1 to destination
  */
-function sumOfNumbersTo(destination) {
+function sumOfNumbersTo(numbersInAnArray) {
     let sum = 0;
-    return sum
-}
+    for (let n = 0 ; n < numbersInAnArray.length; n++){
+        sum += numbersInAnArray[n];
+    }
+    return sum;
+
+}  let numbersInAnArray = [10, 30, 40, 50, 60, 70]
+
+let arrayOfNumbers = sumOfNumbersTo(numbersInAnArray)
+
+alert(arrayOfNumbers)
 
 
 // assignment.sumOfNumbersTo = sumOfNumbersTo;
@@ -32,22 +40,24 @@ function sumOfNumbersTo(destination) {
  * @param {Number} destination the stopping number
  * @returns the object containing count, sum, arrayOfEvenNumbers from 1 to destination
  */
-function countEvenNumbersWithin(destination) {
+function countEvenNumbersWithin(arrayOfEvenNumbers) {
     // Write your code here
     // get the number from 1 to destination
     let sum = 0;
     let count = 0;
-    let arrayOfEvenNumbers = [];
+    let arrayOfEvenNumbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-    return {
-        // property value shorthand
-        // when the property name and the value name are the same
-        // you can just write the property name in your object
-        count,
-        sum,
-        arrayOfEvenNumbers
-    };
+    for(let i = 0; i < arrayOfEvenNumbers.length ; i++) {
+        if (arrayOfEvenNumbers[i] % 2 === 0) {
+            count++;
+        }
+        sum += i
+
+    }
+    return count;
 }
+let sumOfEvenArray = countEvenNumbersWithin(arrayOfEvenNumbers)
+alert(sumOfEvenArray)
 
 // assignment.countEvenNumbersWithin = countEvenNumbersWithin;
 
